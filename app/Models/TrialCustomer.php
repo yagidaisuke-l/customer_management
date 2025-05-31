@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\NegotiationMemo;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TrialCustomer extends Model
 {
@@ -14,5 +16,17 @@ class TrialCustomer extends Model
         'phone_local_code',
         'phone_subscriber',
         'memo',
+        'postal_code',
+        'prefecture',
+        'city',
+        'street',
+        'building',
+        'company_name',
+        'department',
     ];
+
+    public function negotiationMemos(): HasMany
+    {
+        return $this->hasMany(NegotiationMemo::class);
+    }
 }

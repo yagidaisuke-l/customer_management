@@ -7,6 +7,10 @@
 
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <div class="mx-auto mt-6 px-4 py-3 mb-4 bg-green-100 border border-green-400 text-green-800 rounded">
+                    こちらの画面はお試し版のものです。毎日0時にDBを初期化しています。
+                    製品版をご利用したい方は「090-3444-2331」または「rekaizen_info@inlife.work」までお問い合わせください。
+                </div>
             @if (session('flash_message'))
                 <div class="mx-auto mt-6 px-4 py-3 mb-4 bg-green-100 border border-green-400 text-green-800 rounded">
                     {{ session('flash_message') }}

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrialCustomerController;
+use App\Http\Controllers\NegotiationMemoController;
 use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/auth.php';
@@ -22,6 +23,9 @@ Route::prefix('trial')->group(function () {
     Route::put('/{customer}',[TrialCustomerController::class, 'update'])->name('trial.update');
     Route::delete('/{id}',[TrialCustomerController::class, 'destroy'])->name('trial.destroy');
 });
+
+Route::resource('trial_customers.negotiation_memos', NegotiationMemoController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -28,6 +28,13 @@ class StoreTrialCustomerRequest extends FormRequest
             'phone_local_code'  => ['required', 'regex:/^\d{1,4}$/'],
             'phone_subscriber'  => ['required', 'regex:/^\d{4}$/'],
             'memo'              => ['nullable', 'string'],
+            'postal_code'       => ['nullable', 'regex:/^\d{3}-?\d{4}$/'], // 例: 123-4567 または 1234567
+            'prefecture'        => ['nullable', 'string', 'max:100'],
+            'city'              => ['nullable', 'string', 'max:100'],
+            'street'            => ['nullable', 'string', 'max:255'],
+            'building'          => ['nullable', 'string', 'max:255'],
+            'company_name'      => ['nullable', 'string', 'max:255'],
+            'department'        => ['nullable', 'string', 'max:255'],
         ];
     }
 }

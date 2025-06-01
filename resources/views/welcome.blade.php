@@ -202,6 +202,6 @@
 
         <h3>まずは無料でお試しください。<br>
         面倒な設定は不要、メールアドレスだけですぐに始められます。</h3>
-        <button>[▶ 今すぐ無料で試す]</button>
+        <a href="{{ env('APP_URL') }}/trial" class="px-6 py-3 block bg-blue-600 my-1 mx-2" style="color:#fff">▶ 今すぐ無料で試す]</a>
     </body>
 </html>
